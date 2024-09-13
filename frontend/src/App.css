@@ -1,0 +1,92 @@
+@keyframes moveBike {
+  0% {
+    transform: translateX(900%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes moveBike {
+    0% {
+      transform: translateX(600%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes moveBike {
+    0% {
+      transform: translateX(300%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+.animate-bike {
+  animation: moveBike 8s linear infinite;
+  mix-blend-mode: multiply;
+  /* filter: contrast(1); */
+}
+
+/* Add this CSS in your stylesheet */
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-button .toggle-circle {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.active .toggle-circle {
+  transform: translateX(20px);
+}
+
+.toggle-button.green .toggle-circle {
+  background-color: #008000; /* Green */
+}
+
+.toggle-button.red .toggle-circle {
+  background-color: #ff0000; /* Red */
+}
+
+.toggle-button.active.green {
+  background-color: #b2d8b2;
+}
+
+.toggle-button.active.red {
+  background-color: #f5b7b7;
+}
+
+.container {
+  max-width: 100%;
+}
+
+/* Add this to your global CSS file */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+/* ../...................................................... */
